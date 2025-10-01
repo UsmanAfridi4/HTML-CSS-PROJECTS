@@ -1,0 +1,1172 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+
+}
+
+header {
+    /* position: fixed;
+    top: 0;
+    left: 0; */
+    z-index: 100;
+    width: 100%;
+    height: 70px;
+    background-color: 3E3232;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* padding: 0px 30px; */
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    background-color: #0D0D0D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 60px;
+}
+
+.logo img {
+    max-width: 100%;
+    height: 90px;
+    padding-left: 20px;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #E5E5E5;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -20px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#edededc9, #8B5CF6);
+    padding: 20px 0px;
+    z-index: -1;
+    transition: transform 0.7s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #0D0D0D;
+
+}
+
+a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* ########################## Hero Section ########################## */
+
+#hero {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(#1f1f1f53, rgba(0, 0, 0, 0.416)), url('media/scene-construction-site-with-equipment.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 120px;
+}
+
+.hero-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+    /* background-color: #b99c4b; */
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    color: #E5E5E5;
+}
+
+.hero-content p {
+    font-size: 18px;
+    font-family: "Oswald", sans-serif;
+    color: #E5E5E5;
+    padding: 20px 0px;
+    /* background-color: aquamarine; */
+    width: 50%;
+    line-height: 1.8;
+}
+
+.hero-content .btn-1 {
+    padding: 15px 40px;
+    background-color: #8B5CF6;
+    border: none;
+    /* border: 2px solid #374151; */
+    border-radius: 7px;
+    color: #EDEDED;
+    font-family: "Oswald", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 99%;
+    height: 100%;
+    background: linear-gradient(#edededc9, #1f1f1fae);
+    border-radius: 7px;
+    z-index: -1;
+    transition: transform 1s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+    font-weight: bold;
+    overflow: hidden;
+
+}
+
+.btn-1:hover {
+    color: black;
+}
+
+.btn-1:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.btn-1:not(:hover)::after {
+    transform-origin: right;
+}
+
+/* ########################## ABOUT Section ########################## */
+
+#about {
+    width: 100%;
+    height: 800px;
+    background-color: black;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    text-align: center;
+    flex-direction: column;
+    /* padding-top: 20px; */
+    /* gap: 20px; */
+}
+
+.about-head {
+    width: 100%;
+    height: 200px;
+    /* background-color: bisque; */
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    padding-top: 30px;
+    gap: 10px;
+}
+
+.about-head h2 {
+    font-size: 35px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    /* color: black; */
+    color: white;
+}
+
+.about-head p {
+    /* background-color: aquamarine; */
+    font-size: 16px;
+    font-family: "Oswald", sans-serif;
+    /* color: #0D0D0D; */
+    color: white;
+    font-weight: bold;
+    padding: 0px 340px;
+    text-align: center;
+}
+
+.about-card-container {
+    width: 100%;
+    height: 100%;
+    /* background-color: #8B5CF6; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.cards {
+    width: 320px;
+    height: 450px;
+    background-color: white;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 10px;
+    border: none;
+    padding: 40px;
+    text-align: left;
+    position: relative;
+}
+
+.cards .building-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.cards h3 {
+    font-size: 23px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    color: black;
+}
+
+.cards p {
+    font-size: 14px;
+    font-family: "Oswald", sans-serif;
+    color: #0D0D0D;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.cards .image-team {
+    width: 300px;
+    height: 200px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: absolute;
+    left: 10px;
+    top: 250px;
+    z-index: 1;
+}
+
+.about-icon {
+    /* background-color: #0D0D0D; */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #edededc9, #8B5CF6);
+    color: black;
+    font-size: 30px;
+    position: absolute;
+    top: 100px;
+    left: -20px;
+    font-weight: bolder;
+}
+
+/* ########################## Services Overview Section ########################## */
+
+#Services {
+    width: 100%;
+    height: 900px;
+    background-color: white;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 30px;
+}
+
+#Services h2 {
+    font-size: 35px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    color: black;
+}
+
+#Services p {
+    font-size: 16px;
+    font-family: "Oswald", sans-serif;
+    color: black;
+    font-weight: bold;
+    padding: 0px 380px;
+    text-align: center;
+}
+
+.services-container {
+    width: 100%;
+    /* background-color: #8B5CF6; */
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    /* 3 cards in a row */
+    gap: 40px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+#service-card {
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+#service-card:hover .card-inner {
+    transform: rotateY(180deg);
+    /* 👈 flip horizontally */
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    gap: 25px;
+}
+
+.card-front {
+    background: black;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.front-pad {
+    padding-top: 50px;
+}
+
+.front {
+    padding-top: 70px;
+}
+
+.card-back {
+    background: white;
+    color: #fff;
+    transform: rotateY(180deg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+#service-card .card-back .card-back-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background-image: center/cover no-repeat;
+
+}
+
+#service-card img {
+    width: 60px;
+    height: 60px;
+    /* background-color: aquamarine; */
+    position: absolute;
+    top: 95px;
+    right: 15px;
+}
+
+#service-card .front-icon {
+    width: 70px;
+    height: 70px;
+    /* background-color: aquamarine; */
+    position: absolute;
+    top: 30px;
+    right: 120px;
+}
+
+#service-card h2 {
+    font-size: 35px;
+    color: white;
+    /* background-color: #8B5CF6; */
+    font-family: "Oswald", sans-serif;
+    padding-top: 40px;
+
+}
+
+#service-card span {
+    font-size: 14px;
+    color: white;
+    font-family: "Oswald", sans-serif;
+    line-height: 1.8;
+    /* padding-top: 30px; */
+}
+
+/* ########################## ABOUT Section ########################## */
+.portfolio {
+    width: 100%;
+    height: 900px;
+    background-color:#0D0D0D;
+    margin-top: 120px;
+    padding: 50px 150px;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.portfolio h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: white;
+    font-family: "Oswald", sans-serif;
+}
+
+.portfolio p {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    color: white;
+    font-family: "Oswald", sans-serif;
+    padding: 0px 200px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 20px;
+}
+
+.portfolio-item {
+    width: 100%;
+    height: 300px;
+    background-color: #8B5CF6;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    color: #fff;
+    font-size: 10px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    padding: 30px;
+}
+.overlay h3 {
+    font-size: 25px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+}
+.overlay span {
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.6;
+    font-family: "Oswald", sans-serif;
+}
+
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+/* ########################## choose us Section ########################## */
+
+#choose-us {
+    width: 100%;
+    height: 900px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 30px;
+    position: relative;
+}
+.choose-us-content{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.choose-us-content h2 {
+    font-size: 35px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    color: black;
+}
+.choose-us-content p {
+    font-size: 16px;
+    font-family: "Oswald", sans-serif;
+    color: black;
+    font-weight: bold;
+    padding: 0px 380px;
+    text-align: center;
+}
+.chosse-us-conatiner{
+    width: 100%;
+    height: 100%;
+    /* background-color: #8B5CF6; */
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-top: 30px;
+}
+.chosse-us-conatiner .left{
+    width: 50%;
+    height: 80%;
+    /* background-color: aquamarine; */
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    column-gap: 60px;
+    justify-content: center;
+    align-items: center;
+    /* gap: 20px; */
+}
+.left .choose-card{
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    padding: 20px;
+}
+.choose-card i{
+    font-size: 40px;
+    color: #8B5CF6;
+}
+.choose-card h3{
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+}
+.choose-card p{
+    font-size: 15px;
+    font-family: "Oswald", sans-serif;
+    color: #0D0D0D;
+    line-height: 1.6;
+    text-align: left;
+}
+.choose-card:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+
+
+.chosse-us-conatiner .right{
+    width: 50%;
+    height: 80%;
+    background-color: #0D0D0D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 40px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.outer-circle{
+    width: 300px;
+    height: 300px;
+    border: 5px solid #8B5CF6;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+    margin-left: 120px;
+}
+.inner-circle{
+    width: 250px;
+    height: 250px;
+    border: 130px solid #8B5CF6;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+.inner-circle img{
+    max-width: 400px;
+    height: 500px;
+    border-radius: 50%;
+    position: absolute;
+    top: -128px;
+    right: -40px;
+    z-index: 1;
+    /* object-fit: cover; */
+}
+button{
+    padding: 15px 40px;
+    background-color: #8B5CF6;
+    border: none;
+    /* border: 2px solid #374151; */
+    border-radius: 7px;
+    color: #EDEDED;
+    font-family: "Oswald", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 30px;
+    z-index: 1;
+}
+button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 99%;
+    height: 100%;
+    background: linear-gradient(#edededc9, #1f1f1fae);
+    border-radius: 7px;
+    z-index: -1;
+    transition: transform 1s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+    font-weight: bold;
+    overflow: hidden;
+
+}
+button:hover {
+    color: black;
+}
+button:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+button:not(:hover)::after {
+    transform-origin: right;
+}
+
+/* ########################## Client Testimonials  Section ########################## */
+
+#testimonials {
+    width: 100%;
+    height: 900px;
+    background-color: #0D0D0D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 30px;
+    position: relative;
+}
+#testimonials h2 {
+    font-size: 35px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    color: white;
+}
+#testimonials p {
+    font-size: 16px;
+    font-family: "Oswald", sans-serif;
+    color: white;
+    font-weight: bold;
+    padding: 0px 380px;
+    text-align: center;
+}
+.testimonial-container{
+    width: 100%;
+    height: 100%;
+    /* background-color: #8B5CF6; */
+    display: flex;
+    gap: 180px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* flex-direction: column; */
+    /* padding-top: 30px; */
+}
+/************************************ CARD */
+.testimonial-card{
+    width: 350px;
+    height: 350px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    padding: 40px;
+    margin-top: 100px;
+    position: relative;
+}
+.testimonial-card h3{
+    font-size: 25px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    color: black;
+}
+.testimonial-card span{
+    font-size: 15px;
+    font-family: "Oswald", sans-serif;
+    color: #0D0D0D;
+    line-height: 1.4;
+    text-align: left;
+
+}
+.testimonial-card i{
+    position: absolute;
+    top: 125px;
+    left: 150px;
+    color: #FBBF24;
+    font-size: 25px;
+}
+.testimonial-card .star-1{
+    position: absolute;
+    top: 100px;
+    left: 175px;
+    color: #FBBF24;
+    font-size: 25px;
+}
+.testimonial-card .star-2{
+    position: absolute;
+    top: 125px;
+    left: 200px;
+    color: #FBBF24;
+    font-size: 25px;
+
+}
+/************************************* CARD 2 */
+.card-2 i{
+    position: absolute;
+    top: 125px;
+    left: 275px;
+    color: #FBBF24;
+    font-size: 25px;
+}
+.card-2 .star-1{
+    position: absolute;
+    top: 100px;
+    left: 250px;
+    color: #FBBF24;
+    font-size: 25px;
+}
+.card-2 .star-2{
+    position: absolute;
+    top: 125px;
+    left: 220px;
+    color: #FBBF24;
+    font-size: 25px;
+
+}
+/**************************************** CARD 3 */
+.card-3{
+    width: 450px;
+    height: 250px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    padding: 60px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    position: absolute;
+    top: -50px;
+}
+.card-3 i{
+    position: absolute;
+    top: 70px;
+    left: 220px;
+    color: #FBBF24;
+    font-size: 25px;
+}
+.card-3 .star-1{
+    position: absolute;
+    top: 45px;
+    left: 245px;
+    color: #FBBF24;
+    font-size: 25px;
+}
+.card-3 .star-2{
+    position: absolute;
+    top: 70px;
+    left: 270px;
+    color: #FBBF24;
+    font-size: 25px;
+
+}
+/*************************************************** CARD 4 */
+.card-4{
+    width: 450px;
+    height: 250px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    padding: 60px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    position: absolute;
+    bottom: -10px;
+}
+.card-4 i{
+    position: absolute;
+    top: 75px;
+    left: 250px;
+    color: #FBBF24;
+    font-size: 25px;
+}
+.card-4 .star-1{
+    position: absolute;
+    top: 50px;
+    left: 275px;
+    color: #FBBF24;
+    font-size: 25px;
+}
+.card-4 .star-2{
+    position: absolute;
+    top: 75px;
+    left: 300px;
+    color: #FBBF24;
+    font-size: 25px;
+
+}
+/************************************** CARD 5 */
+.card-5{
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    position: absolute;
+    top: -260px;
+    right:150px;
+}
+.card-5 h3{
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    color: white;
+}
+.card-5 span{
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+    color: #E5E5E5;
+    line-height: 1.4;
+    text-align: center;
+
+}.card-5:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px) scale(1.1);
+    transition: all 0.3s ease;
+    background-color: white;
+}
+.card-5:hover h3{
+    color: black;
+}
+
+.testimonial-card:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+/* ########################## Call to Action Section ########################## */
+
+.call-to-action {
+    width: 100%;
+    height: 400px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    padding: 200px;
+    text-align: center;
+}
+.call-to-action h2 {
+    font-size: 45px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    color: black;
+    padding-top: 40px;
+}
+.call-to-action p {
+    font-size: 16px;
+    font-family: "Oswald", sans-serif;
+    color: black;
+    font-weight: bold;
+    line-height: 1.6;
+    text-align: left;
+}
+.call-to-action p span{
+    color: #8B5CF6;
+}
+.call-to-action .btn-2 {
+    padding: 15px 40px;
+    background-color: #0D0D0D;
+    border: none;
+    /* border: 2px solid #374151; */
+    border-radius: 7px;
+    color: #EDEDED;
+    font-family: "Oswald", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    margin-top: 40px;
+}
+
+/************************** FOOTER SECTION*************************** */
+footer {
+    width: 100%;
+    height: 400px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    gap: 20px;
+    padding-top: 30px;
+    position: relative;
+}
+.footer-content{
+    width: 100%;
+    height: 100%;
+    /* background-color: #8B5CF6; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+    
+}
+.footer-info{
+    width: 300px;
+    height: 60%;
+    /* background-color: rgb(23, 35, 167); */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 10px;
+    text-align: left;
+}
+.footer-info h3{
+    font-size: 25px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    color: white;
+}
+.footer-info p{
+    font-size: 15px;
+    font-family: "Oswald", sans-serif;
+    color: #E5E5E5;
+    line-height: 1.6;
+    padding-right: 40px;
+}
+.footer-services{
+    width: 270px;
+    height: 60%;
+    /* background-color: rgb(22, 69, 53); */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 10px;
+}
+.footer-services h3{
+    font-size: 25px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    color: white;
+}
+.footer-services ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-services ul li{
+    list-style: none;
+}
+.footer-services ul li a{
+    text-decoration: none;
+    color: #E5E5E5;
+    font-size: 15px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+}
+
+.footer-services ul li a:hover {
+    color: #8B5CF6;
+
+}
+.our-location{
+    width: 270px;
+    height: 60%;
+    /* background-color: rgb(92, 36, 36); */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px 10px;
+}
+.our-location h3{
+    font-size: 25px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    color: white;
+}   
+.our-location p{
+    font-size: 15px;
+    font-family: "Oswald", sans-serif;
+    color: #E5E5E5;
+    line-height: 1.6;
+}
+.our-location p:hover{
+    color: #8B5CF6;
+    cursor: pointer;
+}
+
+.social-icons{
+    width: 200px;
+    height: 10%;
+    /* background-color: #FBBF24; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* flex-direction: column; */
+    gap: 15px;
+    padding: 30px 10px;
+    position: absolute;
+    top: 222px;
+    left: 180px;
+}
+.social-icons a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.social-icons .ri-facebook-fill{
+    padding: 10px;
+    background-color: #1877F2;
+    border-radius: 50%;
+}
+.ri-facebook-fill:hover{
+    background-color: #0d47a1;
+    /* transition: all 0.3s ease; */
+}
+.ri-twitter-fill{
+    padding: 10px;
+    background-color: #1DA1F2;
+    border-radius: 50%;
+}
+.ri-twitter-fill:hover{
+    background-color: #0d47a1;
+    transition: all 0.3s ease;
+}
+.ri-instagram-fill{
+    padding: 10px;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    border-radius: 50%;
+}
+.ri-linkedin-fill{
+    padding: 10px;
+    background-color: #0A66C2;
+    border-radius: 50%;
+}
+.ri-linkedin-fill:hover{
+    background-color: #0d47a1;
+    transition: all 0.3s ease;
+}
+
